@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace InfiniteOilAndOreRedux.Redirection
+namespace InfiniteOilAndOreRedux.Redirection.Attributes
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
-    public class TargetType : Attribute
+    public class TargetTypeAttribute : Attribute
     {
-        public TargetType(Type type)
+        public TargetTypeAttribute(Type type)
         {
             Type = type;
         }

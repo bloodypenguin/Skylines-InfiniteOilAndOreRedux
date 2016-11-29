@@ -1,4 +1,6 @@
 ﻿using ICities;
+using InfiniteOilAndOreRedux.Detours;
+using InfiniteOilAndOreRedux.Redirection;
 
 namespace InfiniteOilAndOreRedux
 {
@@ -11,12 +13,12 @@ namespace InfiniteOilAndOreRedux
             {
                 return;
             }
-            NaturalResourceManagerDetour.Deploy();
+            AssemblyRedirector.Deploy();
         }
 
         public override void OnLevelUnloading()
         {
-            NaturalResourceManagerDetour.Revert();
+            AssemblyRedirector.Revert();
         }
     }
 }
